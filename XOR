@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+unsigned int findMessage(unsigned int message1, unsigned int message2, unsigned int message3) {
+    return message1 ^ message2 ^ message3;
+}
+
+int main() {
+    unsigned int message1, message2, message3;
+
+    printf("Введіть значення message1 (у шістнадцятковому форматi): 0x");
+    scanf("%x", &message1);
+
+    printf("Введіть значення message2 (у шістнадцятковому форматі): 0x");
+    scanf("%x", &message2);
+
+    printf("Введіть значення message3 (у шістнадцятковому форматі): 0x");
+    scanf("%x", &message3);
+    
+    unsigned int m = findMessage(message1, message2, message3);
+
+    printf("Початкове повiдомлення M: 0x%X\n", m);
+
+    return 0;
+}
